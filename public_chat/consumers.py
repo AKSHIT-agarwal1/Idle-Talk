@@ -203,9 +203,7 @@ class PublicChatConsumer(AsyncJsonWebsocketConsumer):
 		return
 
 	async def send_messages_payload(self, messages, new_page_number):
-		"""
-		Send a payload of messages to the ui
-		"""
+		
 		print("PublicChatConsumer: send_messages_payload. ")
 
 		await self.send_json(
@@ -217,10 +215,7 @@ class PublicChatConsumer(AsyncJsonWebsocketConsumer):
 		)
 
 	async def connected_user_count(self, event):
-		"""
-		Called to send the number of connected users to the room.
-		This number is displayed in the room so other users know how many users are connected to the chat.
-		"""
+		
 		# Send a message down to the client
 		print("PublicChatConsumer: connected_user_count: count: " + str(event["connected_user_count"]))
 		await self.send_json(
