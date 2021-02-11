@@ -62,6 +62,11 @@
 }
 </style>
 
+{% if debug %}
+PUBLIC CHAT
+{% endif %}
+<span class="{% if not debug %}d-none{% endif %} page-number" id="id_page_number">1</span>
+
 
 <div class="card mt-3">
 	<div class="card-header">
@@ -145,10 +150,12 @@
 	console.log("Public Public ChatSocket OPEN")
 		// join chat room
 		if("{{request.user.is_authenticated}}"){
+			if (public_chat_socket.readyState == WebSocket.OPEN) {
 			public_chat_socket.send(JSON.stringify({
 				"command": "join",
 				"room": "{{room_id}}"
 			}));
+		}
 		}
 	})
 
