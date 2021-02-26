@@ -100,7 +100,7 @@ TEMPLATES = [
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DB_NAME = "chat_dev"
+DB_NAME = "django_db"
 DB_USER = "django"
 DB_PASSWORD = "password"
 DATABASES = {
@@ -110,7 +110,7 @@ DATABASES = {
         'USER': DB_USER,
         'PASSWORD': DB_PASSWORD,
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '',
     }
 }
 
