@@ -33,11 +33,10 @@ ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
 WSGI_APPLICATION = f'{config("PROJECT_NAME")}.wsgi.application'
 
 ASGI_APPLICATION = f'{config("PROJECT_NAME")}.routing.application'
-DEBUG = False
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # During development only
 
-ALLOWED_HOSTS = ['idle-talk.herokuapp.com']
+
 
 AUTH_USER_MODEL = 'account.Account' # TODO: ADD THIS LINE.
 AUTHENTICATION_BACKENDS = ( 
@@ -100,19 +99,6 @@ TEMPLATES = [
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DB_NAME = "django_db"
-DB_USER = "django"
-DB_PASSWORD = "password"
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWORD,
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
 
 CHANNEL_LAYERS = {
     'default': {
