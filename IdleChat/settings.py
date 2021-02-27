@@ -26,7 +26,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 SECRET_KEY = config("SECRET_KEY")
 
-ALLOWED_HOSTS = ["139.59.8.238",]
+ALLOWED_HOSTS = ["128.199.31.115",]
 
 ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
 
@@ -190,4 +190,4 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'CodingWithMitch Team <noreply@codingwithmitch.com>'
 
 
-BASE_URL = "http://139.59.8.238"
+BASE_URL = "http://128.199.31.115"
