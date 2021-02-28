@@ -147,7 +147,7 @@ PUBLIC CHAT
 	public_chat_socket.addEventListener("open", function(e){
 	console.log("Public Public ChatSocket OPEN")
 		// join chat room
-		if({{request.user.is_authenticated}}){
+		if({"{request.user.is_authenticated}}"){
 			public_chat_socket.send(JSON.stringify({
 				"command": "join",
 				"room": "{{room_id}}"
