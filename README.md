@@ -1,5 +1,5 @@
 # Idle-Talk
-(I am currently working on pushing the website to production)
+https://www.idlechat.xyz/
 ## Features of the website include:
 1. User Management
 - Registration
